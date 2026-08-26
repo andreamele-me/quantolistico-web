@@ -1,13 +1,15 @@
 :root {
-  --bg: #0a1f14;
-  --bg-deep: #06140d;
-  --surface: #0f2a1c;
-  --line: rgba(212, 175, 55, 0.18);
-  --gold: #d4af37;
-  --gold-soft: #e9d38f;
-  --text: #eef2ea;
-  --text-soft: #a9b8ae;
-  --green-accent: #4fae7f;
+  --bg: #faf5e9;
+  --bg-deep: #efe6cf;
+  --surface: #ffffff;
+  --line: rgba(20, 51, 33, 0.14);
+  --gold: #96721c;
+  --gold-soft: #6b4e0f;
+  --text: #1b2e21;
+  --text-soft: #55645a;
+  --green-accent: #1f5c3c;
+  --badge-bg: #12281c;
+  --badge-line: rgba(212, 175, 55, 0.35);
 }
 
 * { box-sizing: border-box; }
@@ -38,9 +40,10 @@ header .logo-badge {
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
-  background: #fdfdfa;
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-line);
   border-radius: 50%;
-  box-shadow: 0 0 32px rgba(79, 174, 127, 0.35);
+  box-shadow: 0 0 32px rgba(212, 175, 55, 0.25);
   overflow: hidden;
 }
 
@@ -193,6 +196,12 @@ section.content p {
   color: var(--text-soft);
   font-size: 1rem;
   margin: 0 0 16px;
+}
+
+section.content p.bridge {
+  color: var(--gold-soft);
+  font-size: 1.1rem;
+  font-style: italic;
 }
 
 section.content a {
