@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quantolistico</title>
+<meta name="description" content="Andrea Mele — Ottica Integrata Luce e Scienze Quantistiche. Il Disegno Originario, Fotobiostimolazione, Quantoptica.">
+<style>
+  :root {
+    --bg: #0a1f14;
+    --bg-deep: #06140d;
+    --surface: #0f2a1c;
+    --line: rgba(212, 175, 55, 0.18);
+    --gold: #d4af37;
+    --gold-soft: #e9d38f;
+    --text: #eef2ea;
+    --text-soft: #a9b8ae;
+    --green-accent: #4fae7f;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: radial-gradient(ellipse at top, var(--bg) 0%, var(--bg-deep) 70%);
+    color: var(--text);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.6;
+  }
+
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header {
+    padding: 72px 0 40px;
+    text-align: center;
+  }
+
+  header .logo-badge {
+    width: 132px;
+    height: 132px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    background: #fdfdfa;
+    border-radius: 50%;
+    box-shadow: 0 0 32px rgba(79, 174, 127, 0.35);
+    overflow: hidden;
+  }
+
+  header img.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    letter-spacing: 0.04em;
+    margin: 0 0 8px;
+    color: var(--gold-soft);
+    font-weight: 400;
+  }
+
+  .tagline {
+    color: var(--text-soft);
+    font-style: italic;
+    font-size: 1.05rem;
+    margin: 0;
+  }
+
+  .evidenza {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 6px 16px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .intro {
+    max-width: 640px;
+    margin: 0 auto 64px;
+    text-align: center;
+    color: var(--text-soft);
+    font-size: 1.05rem;
+  }
+
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
+    margin-bottom: 72px;
+  }
+
+  .pillar {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    position: relative;
+  }
+
+  .pillar .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--green-accent);
+    margin-bottom: 12px;
+  }
+
+  .pillar h2 {
+    font-size: 1.3rem;
+    color: var(--gold-soft);
+    margin: 0 0 12px;
+    font-weight: 400;
+  }
+
+  .pillar p {
+    color: var(--text-soft);
+    font-size: 0.95rem;
+    margin: 0 0 18px;
+  }
+
+  .pillar .soon {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    color: var(--text-soft);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 4px 12px;
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 32px 0 56px;
+    text-align: center;
+    color: var(--text-soft);
+    font-size: 0.85rem;
+  }
+
+  footer .brand-line {
+    color: var(--gold);
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+
+  @media (prefers-color-scheme: light) {
+    body { background: #0a1f14; color: var(--text); }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo-badge">
+        <img class="logo" src="assets/logo-quantolistico.jpg" alt="Quantolistico">
+      </div>
+      <h1>Quantolistico</h1>
+      <p class="tagline">Ottica Integrata Luce e Scienze Quantistiche</p>
+      <span class="evidenza">Chiedi sempre il livello di evidenza®</span>
+    </header>
+
+    <p class="intro">
+      Andrea Mele, ottico dal 2006. Tre percorsi distinti, tenuti separati per competenza e per registro:
+      prevenzione e terapia della luce, un ambito esplorativo sulla mappa personale, e la fotobiostimolazione
+      come pratica di benessere dichiarata come tale.
+    </p>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="eyebrow">Percorso esplorativo</div>
+        <h2>Il Disegno Originario</h2>
+        <p>Un percorso di astrologia esoterica in letture progressive, le Camere. Non sostituisce percorsi medici o psicologici.</p>
+        <span class="soon">Sezione in arrivo</span>
+      </div>
+      <div class="pillar">
+        <div class="eyebrow">Benessere</div>
+        <h2>Fotobiostimolazione</h2>
+        <p>Terapia della luce come supporto al benessere quotidiano. Nessuna promessa clinica, solo pratica dichiarata per quello che è.</p>
+        <span class="soon">Sezione in arrivo</span>
+      </div>
+      <div class="pillar">
+        <div class="eyebrow">Ottica clinica</div>
+        <h2>Quantoptica</h2>
+        <p>Valutazione optometrica e prevenzione della salute visiva, con attenzione alla superficie oculare.</p>
+        <span class="soon">Sezione in arrivo</span>
+      </div>
+    </div>
+
+    <footer>
+      <p class="brand-line">Quantolistico</p>
+      <p>&copy; 2026 Andrea Mele</p>
+    </footer>
+  </div>
+</body>
+</html>
