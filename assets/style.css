@@ -103,6 +103,11 @@ h1 {
   font-size: 1.05rem;
 }
 
+.intro strong {
+  color: var(--gold-soft);
+  font-weight: 400;
+}
+
 .pillars {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -172,7 +177,7 @@ a.pillar:hover {
 
 section.content {
   max-width: 680px;
-  margin: 0 auto 56px;
+  margin: 0 auto 40px;
 }
 
 section.content h2 {
@@ -190,6 +195,14 @@ section.content p {
   margin: 0 0 16px;
 }
 
+section.content a {
+  color: var(--gold-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+section.content a:hover { color: var(--gold); }
+
 section.content ul {
   color: var(--text-soft);
   padding-left: 20px;
@@ -197,9 +210,38 @@ section.content ul {
 
 section.content li { margin-bottom: 8px; }
 
+.steps {
+  display: grid;
+  gap: 16px;
+  margin: 8px 0 28px;
+}
+
+.step {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px 22px 8px;
+}
+
+.step-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green-accent);
+  margin: 0 0 8px !important;
+}
+
+.step h3 {
+  color: var(--gold-soft);
+  font-size: 1.12rem;
+  font-weight: 400;
+  margin: 0 0 10px;
+  line-height: 1.35;
+}
+
 .disclaimer {
   max-width: 680px;
-  margin: 0 auto 56px;
+  margin: 0 auto 32px;
   padding: 20px 24px;
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -239,3 +281,5 @@ footer .brand-line {
   letter-spacing: 0.06em;
   margin-bottom: 6px;
 }
+
+footer p { margin: 0 0 6px; }
