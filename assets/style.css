@@ -142,10 +142,31 @@ h1 {
 
 .intro {
   max-width: 640px;
-  margin: 0 auto 64px;
+  margin: 56px auto 64px;
   text-align: center;
   color: var(--text-soft);
   font-size: 1.05rem;
+}
+
+.intro p {
+  margin: 0 0 10px;
+}
+
+.intro p:last-child {
+  margin-bottom: 0;
+}
+
+.intro-name {
+  color: var(--text);
+  font-size: 1.22rem;
+  margin-bottom: 4px;
+}
+
+.intro-cv {
+  color: var(--green-accent);
+  letter-spacing: 0.08em;
+  font-size: 0.92rem;
+  margin-bottom: 18px;
 }
 
 .intro strong {
