@@ -1,6 +1,6 @@
 :root {
-  --bg: #faf5e9;
-  --bg-deep: #efe6cf;
+  --bg: #e6eee4;
+  --bg-deep: #c5d4c4;
   --surface: #ffffff;
   --line: rgba(20, 51, 33, 0.14);
   --gold: #96721c;
@@ -16,7 +16,7 @@
 
 body {
   margin: 0;
-  background: radial-gradient(ellipse at top, var(--bg) 0%, var(--bg-deep) 70%);
+  background: #12281c;
   color: var(--text);
   font-family: Georgia, 'Times New Roman', serif;
   line-height: 1.6;
@@ -140,11 +140,15 @@ h1 {
   color: var(--gold);
 }
 
+.after-hero {
+  background: #1a3326;
+}
+
 .intro {
   max-width: 640px;
-  margin: 56px auto 64px;
+  margin: 56px auto 40px;
   text-align: center;
-  color: var(--text-soft);
+  color: rgba(232, 236, 228, 0.88);
   font-size: 1.05rem;
 }
 
@@ -157,45 +161,54 @@ h1 {
 }
 
 .intro-name {
-  color: var(--text);
+  color: #f4f1e6;
   font-size: 1.22rem;
-  margin-bottom: 4px;
+  margin-bottom: 14px;
 }
 
-.intro-cv {
-  color: var(--green-accent);
-  letter-spacing: 0.08em;
-  font-size: 0.92rem;
-  margin-bottom: 18px;
+.spectrum {
+  position: relative;
+  padding: 36px 0 28px;
+  background: linear-gradient(
+    90deg,
+    #1c3a68 0%,
+    #1a5f72 22%,
+    #1f5c3c 48%,
+    #5a6e28 68%,
+    #8a3e28 86%,
+    #6a2432 100%
+  );
 }
 
-.intro strong {
-  color: var(--gold-soft);
-  font-weight: 400;
+.spectrum .wrap {
+  position: relative;
+  z-index: 1;
 }
 
 .pillars {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 24px;
-  margin-bottom: 72px;
+  margin-bottom: 28px;
 }
 
 .pillar {
-  background: var(--surface);
-  border: 1px solid var(--line);
+  background: rgba(255, 252, 246, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 16px;
   padding: 32px 24px;
   text-align: center;
   position: relative;
   text-decoration: none;
   display: block;
-  transition: border-color 0.2s, transform 0.2s;
+  backdrop-filter: blur(6px);
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
 }
 
 a.pillar:hover {
   border-color: var(--gold);
   transform: translateY(-2px);
+  background: rgba(255, 252, 246, 0.96);
 }
 
 .pillar .eyebrow {
@@ -205,6 +218,10 @@ a.pillar:hover {
   color: var(--green-accent);
   margin-bottom: 12px;
 }
+
+.pillar.on-blue .eyebrow { color: #2a4d86; }
+.pillar.on-green .eyebrow { color: #1f5c3c; }
+.pillar.on-red .eyebrow { color: #8a3a2a; }
 
 .pillar h2 {
   font-size: 1.3rem;
@@ -237,6 +254,45 @@ a.pillar:hover {
   border: 1px solid var(--gold);
   border-radius: 999px;
   padding: 4px 12px;
+}
+
+.spectrum-ruler {
+  max-width: 880px;
+  margin: 8px auto 0;
+  padding: 0 24px;
+  color: rgba(255, 252, 246, 0.75);
+}
+
+.ruler-track {
+  height: 18px;
+  border-bottom: 1px solid rgba(255, 252, 246, 0.55);
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 252, 246, 0.85) 0,
+      rgba(255, 252, 246, 0.85) 1px,
+      transparent 1px,
+      transparent 12px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 252, 246, 0.95) 0,
+      rgba(255, 252, 246, 0.95) 1px,
+      transparent 1px,
+      transparent 60px
+    );
+  background-position: left bottom, left bottom;
+  background-size: 12px 8px, 60px 14px;
+  background-repeat: repeat-x;
+}
+
+.ruler-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-family: Georgia, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
 }
 
 /* ─── Pagine di sezione ─── */
@@ -320,7 +376,6 @@ section.content li { margin-bottom: 8px; }
   text-transform: none;
 }
 
-
 .step h3 {
   color: var(--gold-soft);
   font-size: 1.12rem;
@@ -385,15 +440,15 @@ section.content li { margin-bottom: 8px; }
 }
 
 footer {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(255, 252, 246, 0.16);
   padding: 32px 0 56px;
   text-align: center;
-  color: var(--text-soft);
+  color: rgba(232, 236, 228, 0.7);
   font-size: 0.85rem;
 }
 
 footer .brand-line {
-  color: var(--gold);
+  color: #d4af37;
   letter-spacing: 0.06em;
   margin-bottom: 6px;
 }
