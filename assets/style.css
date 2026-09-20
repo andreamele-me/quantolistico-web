@@ -172,7 +172,7 @@ h1 {
 
 .spectrum {
   position: relative;
-  padding: 36px 0 28px;
+  padding: 48px 0 36px;
   background: linear-gradient(
     90deg,
     #1c3a68 0%,
@@ -184,16 +184,24 @@ h1 {
   );
 }
 
-.spectrum .wrap {
+.spectrum-wrap {
+  max-width: 1100px;
   position: relative;
   z-index: 1;
 }
 
 .pillars {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 24px;
-  margin-bottom: 28px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(32px, 5vw, 64px);
+  margin-bottom: 40px;
+}
+
+@media (max-width: 720px) {
+  .pillars {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
 }
 
 .pillar {
@@ -261,42 +269,50 @@ a.pillar:hover {
 }
 
 .spectrum-ruler {
-  max-width: 880px;
-  margin: 8px auto 0;
+  max-width: 1100px;
+  margin: 4px auto 0;
   padding: 0 24px;
-  color: rgba(255, 252, 246, 0.75);
+  color: rgba(255, 252, 246, 0.78);
+}
+
+.ruler-caption {
+  margin: 0 0 8px;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 252, 246, 0.55);
 }
 
 .ruler-track {
-  height: 18px;
-  border-bottom: 1px solid rgba(255, 252, 246, 0.55);
+  height: 22px;
+  border-bottom: 1px solid rgba(255, 252, 246, 0.6);
   background-image:
     repeating-linear-gradient(
       90deg,
-      rgba(255, 252, 246, 0.85) 0,
-      rgba(255, 252, 246, 0.85) 1px,
+      rgba(255, 252, 246, 0.7) 0,
+      rgba(255, 252, 246, 0.7) 1px,
       transparent 1px,
-      transparent 12px
+      transparent 8px
     ),
     repeating-linear-gradient(
       90deg,
       rgba(255, 252, 246, 0.95) 0,
       rgba(255, 252, 246, 0.95) 1px,
       transparent 1px,
-      transparent 60px
+      transparent calc(25% - 0.25px)
     );
   background-position: left bottom, left bottom;
-  background-size: 12px 8px, 60px 14px;
+  background-size: 8px 7px, 25% 16px;
   background-repeat: repeat-x;
 }
 
 .ruler-labels {
   display: flex;
   justify-content: space-between;
-  margin-top: 6px;
+  margin-top: 8px;
   font-family: Georgia, serif;
   font-size: 0.72rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
 }
 
 /* ─── Pagine di sezione ─── */
