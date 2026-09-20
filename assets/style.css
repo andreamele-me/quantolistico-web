@@ -39,13 +39,13 @@ header {
 
 .hero {
   position: relative;
-  min-height: 62vh;
+  min-height: 36vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 72px 24px;
+  padding: 32px 24px 24px;
   text-align: center;
-  background: url('hero-campo-luce.jpg') center 60% / cover no-repeat;
+  background: url('hero-campo-luce.jpg') center 58% / cover no-repeat;
 }
 
 .hero-overlay {
@@ -61,11 +61,15 @@ header {
 }
 
 .hero-inner .logo-badge {
+  width: 92px;
+  height: 92px;
+  margin-bottom: 12px;
   box-shadow: 0 0 40px rgba(212, 175, 55, 0.35);
 }
 
 .hero h1 {
   color: #fdf9ee;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
 }
 
@@ -74,6 +78,7 @@ header {
 }
 
 .hero .evidenza {
+  margin-top: 12px;
   color: #fdf9ee;
   border-color: rgba(253, 249, 238, 0.5);
   background: rgba(18, 40, 28, 0.3);
@@ -150,7 +155,7 @@ h1 {
 
 .intro {
   max-width: 640px;
-  margin: 56px auto 40px;
+  margin: 28px auto 20px;
   text-align: center;
   color: rgba(232, 236, 228, 0.88);
   font-size: 1.05rem;
@@ -172,7 +177,7 @@ h1 {
 
 .spectrum {
   position: relative;
-  padding: 48px 0 36px;
+  padding: 28px 0 32px;
   background: linear-gradient(
     90deg,
     #1c3a68 0%,
