@@ -1,0 +1,8 @@
+*.pds
+*.pdsx
+*.bak
+.DS_Store
+Thumbs.db
+rushes/
+*.prproj
+*.aep
