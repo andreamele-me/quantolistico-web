@@ -320,8 +320,6 @@ a.pillar:hover {
   letter-spacing: 0.06em;
 }
 
-/* ─── Pagine di sezione ─── */
-
 section.content {
   max-width: 680px;
   margin: 0 auto 40px;
@@ -335,6 +333,17 @@ section.content h2 {
 }
 
 section.content h2:first-child { margin-top: 0; }
+
+section.content h2 a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(107, 78, 15, 0.35);
+}
+
+section.content h2 a:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
 
 section.content p {
   color: var(--text-soft);
