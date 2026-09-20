@@ -474,6 +474,15 @@ section.content li { margin-bottom: 8px; }
   color: var(--text-soft);
   font-size: 0.9rem;
   font-style: italic;
+  text-align: center;
+}
+
+.disclaimer p {
+  margin: 0 0 8px;
+}
+
+.disclaimer p:last-child {
+  margin-bottom: 0;
 }
 
 .cta {
