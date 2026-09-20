@@ -363,6 +363,32 @@ section.content ul {
 
 section.content li { margin-bottom: 8px; }
 
+.livello {
+  display: inline-block;
+  margin: 8px 0 0;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.livello.consolidato {
+  background: #e4eee8;
+  color: #1f5c3c;
+}
+
+.livello.incerto {
+  background: #f4ead4;
+  color: #6b4e0f;
+}
+
+.livello.bottega {
+  background: #e8eef6;
+  color: #2a4d86;
+}
+
 .steps {
   display: grid;
   gap: 16px;
