@@ -386,7 +386,7 @@ section.content p.bridge {
 
 section.content a {
   color: var(--gold-soft);
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-offset: 3px;
 }
 
@@ -617,4 +617,19 @@ body.home footer .site-links a:hover {
 
 .scheda-fonte p:last-child {
   margin-bottom: 0;
+}
+
+.visite {
+  position: fixed;
+  right: 16px;
+  bottom: 10px;
+  z-index: 20;
+  margin: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--text-soft);
+  opacity: 0.7;
+}
+body.home .visite {
+  color: rgba(232, 236, 228, 0.55);
 }
