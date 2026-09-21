@@ -136,6 +136,17 @@ h1 {
 
 .back-link:hover { color: var(--gold-soft); }
 
+.crumbs {
+  margin: 0 0 24px;
+}
+.crumbs .back-link {
+  margin-bottom: 0;
+}
+.crumb-sep {
+  margin: 0 8px;
+  color: var(--text-soft);
+}
+
 .tagline {
   color: var(--text-soft);
   font-style: italic;
@@ -632,4 +643,26 @@ body.home footer .site-links a:hover {
 }
 body.home .visite {
   color: rgba(232, 236, 228, 0.55);
+}
+
+.seq-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  max-width: 680px;
+  margin: 0 auto 16px;
+}
+.seq-nav a {
+  color: var(--gold-soft);
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+}
+.seq-nav a:hover { color: var(--gold); }
+.seq-nav .seq-next {
+  margin-left: auto;
+  text-align: right;
 }
