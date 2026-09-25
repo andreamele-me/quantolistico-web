@@ -12,6 +12,7 @@ interface Props {
   disclaimer: string;
   footerLinks: FooterLink[];
   backLinkHref?: string;
+  showLogo?: boolean;
 }
 
 const {
@@ -22,6 +23,7 @@ const {
   disclaimer,
   footerLinks,
   backLinkHref = 'index.html',
+  showLogo = false,
 } = Astro.props;
 ---
 
@@ -39,9 +41,11 @@ const {
   <div class="wrap">
     <header>
       <a class="back-link" href={backLinkHref}>Quantolistico</a>
-      <div class="logo-badge small">
-        <img class="logo" src="/assets/logo-quantolistico.svg" alt="Quantolistico">
-      </div>
+      {showLogo && (
+        <div class="logo-badge small">
+          <img class="logo" src="/assets/logo-quantolistico.svg" alt="Quantolistico">
+        </div>
+      )}
       <h1>{title}</h1>
       <p class="tagline">{tagline}</p>
     </header>
