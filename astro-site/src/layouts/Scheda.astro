@@ -14,7 +14,9 @@ interface Props {
   pageTitle?: string;
   description: string;
   tagline: string;
-  ctaSubject: string;
+  ctaSubject?: string;
+  ctaLabel?: string;
+  ctaEmail?: string;
   disclaimer?: string[];
   footerLinks?: FooterLink[];
   backLinkHref?: string;
@@ -32,6 +34,8 @@ const {
   description,
   tagline,
   ctaSubject,
+  ctaLabel = 'Scrivimi',
+  ctaEmail = 'otticomeleandrea@gmail.com',
   disclaimer = [],
   footerLinks = [],
   backLinkHref = 'index.html',
@@ -86,7 +90,9 @@ const {
       </div>
     )}
 
-    <a class="cta" href={`mailto:otticomeleandrea@gmail.com?subject=${ctaSubject}`}>Scrivimi</a>
+    {ctaSubject && (
+      <a class="cta" href={`mailto:${ctaEmail}?subject=${ctaSubject}`}>{ctaLabel}</a>
+    )}
 
     {(seqPrev || seqNext) && (
       <nav class="seq-nav" aria-label="Nella sezione">

@@ -1,0 +1,30 @@
+---
+import Scheda from '../layouts/Scheda.astro';
+---
+
+<Scheda
+  title="La dose"
+  pageTitle="La dose | Fotobiostimolazione"
+  description="Fluence, irradianza, tempo, distanza. Curva bifasica: poco non fa nulla, troppo può inibire. La scheda del prodotto non è uno studio."
+  tagline="Il colore da solo non basta."
+  disclaimer={[
+    "La dose si valuta sulla persona e sul dispositivo, non su una pagina.",
+    "Non sostituisce il consiglio di chi ha in carico la tua salute.",
+  ]}
+  backLinkHref="fotobiostimolazione.html"
+  backLinkLabel="Fotobiostimolazione"
+  crumbs
+  seqPrev={{ href: "fotobiostimolazione-mitocondrio.html", label: "Il mitocondrio" }}
+  seqNext={{ href: "fotobiostimolazione-cosa-non-e.html", label: "Cosa non è" }}
+>
+<p class="bridge">Tre variabili insieme, sempre: quanto, quanto a lungo, da che distanza.</p>
+<h2>Cosa si misura</h2>
+<p>L’irradianza è la potenza sul centimetro quadrato. La fluence è l’energia arrivata su quella superficie, in joule su centimetro quadrato. Il tempo e la distanza le decidono. Senza questi numeri «rosso» è un aggettivo, non una dose. <span class="livello consolidato">Grandezze fisiche</span></p>
+<p>Pelle, melanina, angolo del fascio e se la sorgente è un LED o un laser cambiano quanto di quella fluence arriva dove serve. La scheda di un prodotto racconta la lampada. Non racconta il tuo tessuto. <span class="livello bottega">Scheda e banco</span></p>
+<h2>Poco, abbastanza, troppo</h2>
+<p>In fotobiomodulazione si vede spesso una curva a campana. Sotto una soglia non succede nulla di misurabile. In una fascia stretta può esserci un effetto. Sopra, l’effetto si riduce o si inverte. «Di più» non è meglio. Non è un motto: è il motivo per cui copiare un protocollo da un reel non è una dose. <span class="livello incerto">Curva bifasica, numeri non universali</span></p>
+<h2>Ambulatorio e salotto</h2>
+<p>Un dispositivo usato in uno studio, con distanza e tempo fissati, non è il pannello lasciato acceso mentre si fa altro. Stessa parola, «luce rossa». Contratto diverso con la pelle. Questa sezione non vende un protocollo e non copia i minuti da un catalogo.</p>
+<h2>Cosa non dico</h2>
+<p>Non dico quanti minuti «vanno bene per tutti». Non dico che una seduta lunga compensa una lunghezza d’onda sbagliata. Non dico che l’assenza di uno studio su un endpoint sia la prova che «non funziona».</p>
+</Scheda>
