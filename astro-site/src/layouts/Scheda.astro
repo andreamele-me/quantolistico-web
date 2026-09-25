@@ -1,0 +1,74 @@
+---
+interface FooterLink {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  tagline: string;
+  ctaSubject: string;
+  disclaimer: string;
+  footerLinks: FooterLink[];
+  backLinkHref?: string;
+}
+
+const {
+  title,
+  description,
+  tagline,
+  ctaSubject,
+  disclaimer,
+  footerLinks,
+  backLinkHref = 'index.html',
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title} | Quantolistico</title>
+<meta name="description" content={description}>
+<link rel="icon" href="/assets/logo-quantolistico.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="back-link" href={backLinkHref}>Quantolistico</a>
+      <div class="logo-badge small">
+        <img class="logo" src="/assets/logo-quantolistico.svg" alt="Quantolistico">
+      </div>
+      <h1>{title}</h1>
+      <p class="tagline">{tagline}</p>
+    </header>
+
+    <section class="content">
+      <slot />
+    </section>
+
+    <div class="disclaimer">
+      <p>{disclaimer}</p>
+    </div>
+
+    <a class="cta" href={`mailto:otticomeleandrea@gmail.com?subject=${ctaSubject}`}>Scrivimi</a>
+    <p class="indietro-wrap"><a class="back-link" href={backLinkHref}>Indietro</a></p>
+
+    <footer>
+      <p class="brand-line">Quantolistico</p>
+      <p class="site-links">
+        {footerLinks.map((link, i) => (
+          <>
+            {i > 0 && ' '}
+            <a href={link.href}>{link.label}</a>
+          </>
+        ))}
+      </p>
+      <p>&copy; 2026 Andrea Mele</p>
+    </footer>
+  </div>
+</body>
+</html>
