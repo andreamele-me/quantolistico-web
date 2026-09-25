@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="description" content={description}>
+<link rel="icon" href="/assets/logo-quantolistico.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "name": "Andrea Mele",
+      "url": "https://quantolistico.it/chi-sono.html",
+      "jobTitle": "Ottico"
+    },
+    {
+      "@type": "WebSite",
+      "name": "Quantolistico",
+      "url": "https://quantolistico.it/",
+      "description": "Termine coniato da Andrea Mele. Ottica, luce e un percorso esplorativo tenuti distinti per competenza e per registro.",
+      "author": {
+        "@type": "Person",
+        "name": "Andrea Mele"
+      }
+    }
+  ]
+}, null, 2)} />
+</head>
+<body class="home">
+  <slot />
+</body>
+</html>
