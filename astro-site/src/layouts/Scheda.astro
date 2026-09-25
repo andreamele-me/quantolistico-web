@@ -4,26 +4,43 @@ interface FooterLink {
   label: string;
 }
 
+interface SeqLink {
+  href: string;
+  label: string;
+}
+
 interface Props {
   title: string;
+  pageTitle?: string;
   description: string;
   tagline: string;
   ctaSubject: string;
-  disclaimer: string;
-  footerLinks: FooterLink[];
+  disclaimer?: string[];
+  footerLinks?: FooterLink[];
   backLinkHref?: string;
+  backLinkLabel?: string;
+  crumbs?: boolean;
   showLogo?: boolean;
+  noCache?: boolean;
+  seqPrev?: SeqLink;
+  seqNext?: SeqLink;
 }
 
 const {
   title,
+  pageTitle = `${title} | Quantolistico`,
   description,
   tagline,
   ctaSubject,
-  disclaimer,
-  footerLinks,
+  disclaimer = [],
+  footerLinks = [],
   backLinkHref = 'index.html',
+  backLinkLabel = 'Quantolistico',
+  crumbs = false,
   showLogo = false,
+  noCache = false,
+  seqPrev,
+  seqNext,
 } = Astro.props;
 ---
 
@@ -32,7 +49,8 @@ const {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{title} | Quantolistico</title>
+{noCache && <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">}
+<title>{pageTitle}</title>
 <meta name="description" content={description}>
 <link rel="icon" href="/assets/logo-quantolistico.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/style.css">
@@ -40,7 +58,15 @@ const {
 <body>
   <div class="wrap">
     <header>
-      <a class="back-link" href={backLinkHref}>Quantolistico</a>
+      {crumbs ? (
+        <p class="crumbs">
+          <a class="back-link" href={backLinkHref}>{backLinkLabel}</a>
+          <span class="crumb-sep" aria-hidden="true">·</span>
+          <a class="back-link" href="index.html">Quantolistico</a>
+        </p>
+      ) : (
+        <a class="back-link" href={backLinkHref}>{backLinkLabel}</a>
+      )}
       {showLogo && (
         <div class="logo-badge small">
           <img class="logo" src="/assets/logo-quantolistico.svg" alt="Quantolistico">
@@ -54,23 +80,35 @@ const {
       <slot />
     </section>
 
-    <div class="disclaimer">
-      <p>{disclaimer}</p>
-    </div>
+    {disclaimer.length > 0 && (
+      <div class="disclaimer">
+        {disclaimer.map((p) => <p>{p}</p>)}
+      </div>
+    )}
 
     <a class="cta" href={`mailto:otticomeleandrea@gmail.com?subject=${ctaSubject}`}>Scrivimi</a>
-    <p class="indietro-wrap"><a class="back-link" href={backLinkHref}>Indietro</a></p>
+
+    {(seqPrev || seqNext) && (
+      <nav class="seq-nav" aria-label="Nella sezione">
+        {seqPrev && <a class="seq-prev" href={seqPrev.href}>{seqPrev.label}</a>}
+        {seqNext && <a class="seq-next" href={seqNext.href}>{seqNext.label}</a>}
+      </nav>
+    )}
+
+    <p class="indietro-wrap"><a class="back-link" href={backLinkHref}>{backLinkHref === 'index.html' ? 'Indietro' : 'Indice della sezione'}</a></p>
 
     <footer>
       <p class="brand-line">Quantolistico</p>
-      <p class="site-links">
-        {footerLinks.map((link, i) => (
-          <>
-            {i > 0 && ' '}
-            <a href={link.href}>{link.label}</a>
-          </>
-        ))}
-      </p>
+      {footerLinks.length > 0 && (
+        <p class="site-links">
+          {footerLinks.map((link, i) => (
+            <>
+              {i > 0 && ' '}
+              <a href={link.href}>{link.label}</a>
+            </>
+          ))}
+        </p>
+      )}
       <p>&copy; 2026 Andrea Mele</p>
     </footer>
   </div>

@@ -1,0 +1,45 @@
+---
+import Scheda from '../layouts/Scheda.astro';
+---
+
+<Scheda
+  title="Geometria delle lenti"
+  pageTitle="Geometria delle lenti da vista | Quantoptica"
+  description="Free-form, posizione d’uso, progressive. Quali misure servono e perché la diottria sul foglio non è quella sul viso."
+  tagline="La diottria sul foglio non è quella sul viso."
+  ctaSubject="Quantoptica%20geometria%20lenti"
+  disclaimer={[
+    "Questa pagina è mestiere di banco. Non è un listino e non è una prescrizione.",
+    "Le misure si prendono in sede, sulla montatura che si porterà.",
+  ]}
+  backLinkHref="quantoptica.html"
+  backLinkLabel="Quantoptica"
+  crumbs
+  seqPrev={{ href: "quantoptica-materiali-lenti.html", label: "Materiali delle lenti" }}
+  seqNext={{ href: "quantoptica-pulizia-occhiali.html", label: "Pulizia occhiali" }}
+>
+<p class="bridge">Una lente da vista è una superficie calcolata, poi tagliata sulla montatura. Il materiale sta in <a href="quantoptica-materiali-lenti.html">Di che sono fatte le lenti</a>. Qui sta la forma.</p>
+<h2>Potere come portato</h2>
+<p>La rifrazione si misura in forottero o su occhiale di prova, a una certa distanza dalla cornea. La montatura scelta ha un’altra distanza (vertice), un’altra inclinazione (angolo pantoscopico) e, se è avvolgente, un altro wrap. Se non si ricalcola, il potere effettivo sul viso non è quello scritto. <span class="livello consolidato">Ottica geometrica</span></p>
+<p>Il software di costruzione può compensare quei tre numeri. Non «restituisce l’esame». Riduce l’errore tra banco prova e viso. Se i numeri non si misurano, si usano default. I default vanno bene su una montatura piatta. Mentono su una sportiva. <span class="livello bottega">Pratica di banco</span></p>
+<h2>Free-form</h2>
+<p>Free-form significa che la superficie si genera punto per punto su una macchina a controllo numerico, non da una calotta sola. Serve a mettere il potere dove serve e a togliere spessore dove la forma della montatura lo permette. Non è un marchio. Non è «milioni di punti» come garanzia. È un metodo di calcolo e di taglio. <span class="livello consolidato">Costruzione</span></p>
+<p>Lo spessore minimo dipende da potere, indice, diametro e forma. Una montatura stretta e alta non ha lo stesso disco di una tonda larga. Il calcolo sulla sagoma è utile. Non cancella la fisica: un meno alto resta spesso al bordo, un più alto resta spesso al centro.</p>
+<h2>Tre geometrie, tre mestieri</h2>
+<p><strong>Monofocale.</strong> Un potere. Lontano, o vicino, o un’intermedia scelta. Basta se l’occhio accomoda ancora, o se quel paio ha un solo lavoro.</p>
+<p><strong>Progressiva.</strong> Lontano in alto, vicino in basso, una rampa in mezzo. I canali laterali restano zone di compromesso: distorsione, nuoto, «non ci sto». Non è un difetto del portatore. È la geometria. Canale più lungo: più morbido, vuole più altezza di montaggio. Canale corto: più rapido, più stretto. <span class="livello bottega">Pratica di banco</span></p>
+<p><strong>Intermedia / da vicino esteso.</strong> Lo «workspace»: ufficio, banco, spartito. Guadagna campo medio e vicino. Perde il lontano vero. Non è una progressiva «più economica». È un altro contratto con la distanza. <span class="livello bottega">Scelta d’uso</span></p>
+<p>Bifocale e executive esistono ancora. Lo scalino si vede. Il salto di potere si sente. Restano per chi li chiede o per un lavoro preciso. Non sono un residuo da nascondere.</p>
+<h2>Cosa si misura prima di ordinare</h2>
+<p>Senza questi numeri la lente è un disco generico. Con questi numeri è un disco per quel viso e quella montatura.</p>
+<ul>
+<li>Distanza interpupillare per il lontano (DIP), occhio per occhio se si può.</li>
+<li>Inset: quanto il centro del vicino si sposta in dentro rispetto al lontano. La convergenza non è uguale per tutti.</li>
+<li>Altezza di montaggio: dal bordo inferiore della lente al centro pupillare, con la montatura in posa.</li>
+<li>Scatola A e B, ponte: la forma vera, non il disegno del catalogo.</li>
+<li>Angolo pantoscopico, avvolgimento, distanza apice-cornea: i tre della posizione d’uso.</li>
+</ul>
+<p>L’altezza sbagliata di due millimetri su una progressiva sposta il vicino sotto il bordo o mette il lontano troppo in basso. Si rifà la lente. Non si «abitua». <span class="livello bottega">Pratica di banco</span></p>
+<h2>Cosa non dico</h2>
+<p>Non dico che un nome commerciale di superficie sia una qualità misurata. Non dico che free-form tolga l’adattamento a una progressiva. Non dico i prezzi. Non dico quale laboratorio «è il più veloce». Al banco: misura, montatura, uso reale. Poi si sceglie la geometria. Il disco e l’UV stanno nelle altre schede.</p>
+</Scheda>

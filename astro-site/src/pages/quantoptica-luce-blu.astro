@@ -1,0 +1,55 @@
+---
+import Scheda from '../layouts/Scheda.astro';
+---
+
+<Scheda
+  title="Luce blu, luce rossa"
+  pageTitle="Luce blu, luce rossa | Quantoptica"
+  description="Stessa fisiologia circadiana, due orari: luce corta di giorno; filtro rosso/ambra la sera. Melanopsina, epifisi, melatonina. Cosa misurano gli studi e cosa no."
+  tagline="Melanopsina, ghiandole, orario. Non il colore in sé."
+  ctaSubject="Quantoptica%20luce%20blu"
+  disclaimer={[
+    "Questa pagina descrive fisiologia. Non è una diagnosi endocrina e non è un protocollo per il sonno.",
+    "I disturbi del sonno o ormonali si valutano con il medico competente.",
+  ]}
+  backLinkHref="quantoptica.html"
+  backLinkLabel="Quantoptica"
+  crumbs
+  seqNext={{ href: "quantoptica-filtri-blu.html", label: "Filtri blu" }}
+>
+  <p class="bridge">Una piccola popolazione di cellule gangliari della retina, le ipRGC, contiene il fotopigmento melanopsina (OPN4). Il loro picco di sensibilità sta intorno ai 460–480 nm.</p>
+  <h2>Non è il cono «blu»</h2>
+  <p>Coni e bastoncelli fanno l’immagine. Le ipRGC fanno un altro mestiere: dicono al cervello <em>che ora è</em>. Proiettano soprattutto al nucleo soprachiasmatico (SCN) dell’ipotalamo, l’orologio centrale. Da lì il segnale si dirama verso centri di veglia, temperatura e controllo delle ghiandole. <span class="livello consolidato">Evidenza consolidata</span></p>
+  <h2>Dall’occhio all’epifisi</h2>
+  <p>Lo SCN frena o lascia andare la ghiandola pineale (epifisi) attraverso un circuito lungo: ipotalamo, midollo, ganglio cervicale superiore, fibre che arrivano all’epifisi. Di giorno la luce, via melanopsina, tiene bassa la melatonina. Di notte, al buio, l’epifisi la rilascia. È un ormone di tempo, non un sonnifero da banco.</p>
+  <p>Se la sera arriva ancora luce corta e abbastanza intensa, il circuito legge «giorno»: la curva della melatonina si sposta in avanti, l’addormentamento ritarda. La stessa luce, al mattino, è utile: ancora l’orologio e sostiene il cortisolo della veglia. <span class="livello consolidato">Fisiologia circadiana</span></p>
+  <h2>Cortisolo e resto dell’asse</h2>
+  <p>Lo SCN parla anche all’asse ipotalamo, ipofisi, surrene. Il cortisolo ha un picco al risveglio e scende verso sera. Luce intensa a orari sbagliati non «rompe le surrenali»: disallinea i ritmi. Serotonina, temperatura corporea, fame e pressione seguono lo stesso maestro. Non è un elenco di malattie. È un orologio che, se lo sposti ogni notte, fatica a riallinearsi. <span class="livello consolidato">Asse neuroendocrino circadiano</span></p>
+  <h2>Dose, fonte, orario</h2>
+  <p>Tre variabili, sempre insieme. Il sole a mezzogiorno è un altro ordine di grandezza rispetto a un monitor. Lo schermo conta perché è vicino, spesso freddo di colore, e arriva dopo le 22. I livelli da device, nella vita normale, non hanno prova di danno maculare permanente. <span class="livello consolidato">Danno da schermo non dimostrato</span></p>
+  <p>Il disagio dopo ore (secchezza, offuscamento, mal di testa) arriva più da ammiccamento ridotto, accomodazione tenuta e contrasto che da un veleno blu. Prima la stanza e l’ora. Poi, se serve, le lenti. Cosa dicono i filtri e i RCT sta in <a href="quantoptica-filtri-blu.html">Filtri «anti-luce blu»</a>.</p>
+
+  <h2>La sera: il filtro rosso</h2>
+  <p>Stesso circuito. Altro orario. Di sera, la luce artificiale e gli schermi sono ancora ricchi di blu-verde sotto i 550 nm. Quella fascia tiene acceso il segnale «è giorno» sullo SCN e ritarda il rilascio di melatonina dall’epifisi. <span class="livello consolidato">Spettro d’azione della melanopsina</span></p>
+  <p>Un filtro che taglia selettivamente sotto i 550 nm (all’occhio è una lente rossa o ambra) toglie quella componente e lascia passare il resto dello spettro. Non emette luce. Non stimola un enzima. Non è fotobiostimolazione. È un filtro passivo: toglie una parte dello spettro ambientale, non aggiunge energia. <span class="livello consolidato">Filtro ottico, non sorgente</span></p>
+  <p>Gli studi che contano misurano soppressione di melatonina e, in alcuni casi, l’inizio del sonno. Non misurano «il sonno in generale» e non chiudono una diagnosi di insonnia. Indeterminato su un endpoint clinico non è un no. Non è un sì da vetrina. <span class="livello incerto">Endpoint clinici del sonno</span></p>
+
+  <div class="scheda-fonte">
+    <p class="scheda-fonte-label">Referenze (ciò che gli studi misurano)</p>
+    <p><a href="https://pubmed.ncbi.nlm.nih.gov/11487664/" target="_blank" rel="noopener noreferrer">Brainard GC et al. Action spectrum for melatonin regulation by light in humans. <em>J Neurosci.</em> 2001;21(16):6405-6412.</a></p>
+    <p><a href="https://pubmed.ncbi.nlm.nih.gov/11507159/" target="_blank" rel="noopener noreferrer">Thapan K et al. An action spectrum for melatonin suppression. <em>J Physiol.</em> 2001;535(Pt 1):261-267.</a></p>
+    <p><a href="https://pubmed.ncbi.nlm.nih.gov/21193540/" target="_blank" rel="noopener noreferrer">Gooley JJ et al. Exposure to room light before bedtime suppresses melatonin onset. <em>J Clin Endocrinol Metab.</em> 2011;96(3):E463-472.</a></p>
+    <p><a href="https://pubmed.ncbi.nlm.nih.gov/12970330/" target="_blank" rel="noopener noreferrer">Lockley SW et al. High sensitivity of the human circadian melatonin rhythm to resetting by short wavelength light. <em>J Clin Endocrinol Metab.</em> 2003;88(9):4502-4505.</a></p>
+    <p><a href="https://pubmed.ncbi.nlm.nih.gov/16879321/" target="_blank" rel="noopener noreferrer">Sasseville A et al. Blue blocker glasses impede the capacity of bright light to suppress melatonin production. <em>J Pineal Res.</em> 2006;41(1):73-78.</a></p>
+    <p><a href="https://pubmed.ncbi.nlm.nih.gov/15713707/" target="_blank" rel="noopener noreferrer">Kayumov L et al. Blocking low-wavelength light prevents nocturnal melatonin suppression without adverse effect on performance during simulated shift work. <em>J Clin Endocrinol Metab.</em> 2005;90(5):2755-2761.</a></p>
+  </div>
+
+  <p>Al banco, se si prova una lente di questo tipo: uso serale, due-quattro ore prima di dormire, in stanza con luce artificiale o schermi. Di giorno, in piena luce naturale, non ha mestiere. Non è per la guida notturna: riduce il contrasto cromatico. Con retinite pigmentosa o degenerazione maculare avanzata si chiede prima il parere di chi ha in carico l’occhio. Sotto i dodici anni, senza una valutazione professionale, no. <span class="livello bottega">Pratica di banco</span></p>
+
+  <h2>Simbolo e fotorecettore</h2>
+  <p>In comunicazione il rosso «attiva», il blu «calma», il verde «equilibra». Sono metafore utili. Non sono lo spettro d’azione di un pigmento. <span class="livello bottega">Registro simbolico</span></p>
+  <p>Sull’occhio e sul tessuto contano lunghezza d’onda, dose, orario e quale molecola assorbe. La melanopsina risponde soprattutto al blu-ciano (circa 460–480 nm) e parla all’orologio: di giorno tiene bassa la melatonina. La citocromo <em>c</em> ossidasi assorbe nel rosso e nel vicino infrarosso: è il mestiere della <a href="fotobiostimolazione.html">Fotobiostimolazione</a>, un fotone che arriva al tessuto, non un significato. Il filtro rosso/ambra di questa pagina non «carica». Toglie il corto. <span class="livello consolidato">Due cromofori, due mestieri</span></p>
+
+  <h2>Cosa non dico</h2>
+  <p>Non dico che uno schermo «distrugge l’endocrino». Non dico che un antiriflesso viola ripara l’epifisi. Non dico che una lente rossa risolva l’insonnia. Non dico che dieci minuti di rosso diano energia o che il blu calmi: sulla retina il blu-ciano sveglia l’orologio. La melanopsina è vera. Il filtro da catalogo è un altro capitolo, e lì l’evidenza clinica è debole.</p>
+</Scheda>
