@@ -3,6 +3,7 @@
 Repo: https://github.com/andreamele-me/quantolistico-web
 Branch: `main`
 Hosting: GitHub Pages + Cloudflare → quantolistico.it
+Stato DNS/posta: andreamele-me/quantolistico-memoria, file DNS.md. Prima di parlarne, interrogare il DNS vivo.
 
 ## Ruoli
 
