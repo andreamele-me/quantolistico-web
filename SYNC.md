@@ -9,16 +9,18 @@ Stato DNS/posta: andreamele-me/quantolistico-memoria, file DNS.md. Prima di parl
 
 | Macchina | Ruolo | Path |
 |---|---|---|
-| Mint P645-M + Lexar interno | Casa. Qui si modifica il sito. | `/media/andrea/LEXAR/SITO WEB/quantolistico-web` |
+| Mint P645-M + Lexar interno | Casa. Qui si modifica il sito. | `/mnt/lexar/SITO WEB/quantolistico-web` |
 | Nitro + PowerDirector | Solo video. Non si edita HTML/CSS. | rushes sul disco Nitro; mp4 finiti → cartella `assets/video/` sul Mint |
 
 Clone doppio da ignorare o rimuovere sul Mint:
-`/media/andrea/LEXAR/ILDISEGNOORIGINARIO/quantolistico-web`
+`/mnt/lexar/ILDISEGNOORIGINARIO/quantolistico-web`
+
+Nota: dal 23 set 2026 il Lexar è montato via fstab su `/mnt/lexar` (non più `/media/andrea/LEXAR`), per evitare che il mount udisks facesse sparire la cartella dal file picker di Code.
 
 ## Sul Mint (ogni sessione)
 
 ```bash
-cd "/media/andrea/LEXAR/SITO WEB/quantolistico-web"
+cd "/mnt/lexar/SITO WEB/quantolistico-web"
 git pull
 # ... lavori ...
 git add -A
