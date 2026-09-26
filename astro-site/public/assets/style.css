@@ -674,3 +674,23 @@ body.home footer .site-links a:hover {
     text-align: left;
   }
 }
+
+.foto-scheda {
+  margin: 32px 0;
+}
+.foto-scheda img {
+  display: block;
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid var(--line);
+}
+.foto-scheda figcaption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+.foto-scheda figcaption .livello {
+  display: block;
+  margin-top: 6px;
+}

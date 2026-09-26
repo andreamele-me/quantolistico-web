@@ -1,0 +1,29 @@
+---
+// Componente inerte: non ancora usato in nessuna pagina.
+// Foto e testo restano separati (niente scritta sopra l'immagine, come sui post).
+// Aggiungere il livello di evidenza solo se la didascalia contiene un'affermazione pesante.
+interface Props {
+  src: string;
+  alt: string;
+  caption?: string;
+  livello?: 'consolidato' | 'incerto' | 'bottega';
+}
+
+const livelloLabel: Record<string, string> = {
+  consolidato: 'Evidenza consolidata',
+  incerto: 'Evidenza bassa / incerta',
+  bottega: 'Pratica di banco',
+};
+
+const { src, alt, caption, livello } = Astro.props;
+---
+
+<figure class="foto-scheda">
+  <img src={src} alt={alt} loading="lazy" decoding="async">
+  {(caption || livello) && (
+    <figcaption>
+      {caption}
+      {livello && <span class={`livello ${livello}`}>{livelloLabel[livello]}</span>}
+    </figcaption>
+  )}
+</figure>
