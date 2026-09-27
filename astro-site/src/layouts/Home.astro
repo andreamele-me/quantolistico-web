@@ -6,7 +6,8 @@ interface Props {
 }
 
 const { title, description, ogImage = '/assets/og-default.png' } = Astro.props;
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const canonicalPath = Astro.url.pathname === '/index.html' ? '/' : Astro.url.pathname;
+const canonicalUrl = new URL(canonicalPath, Astro.site);
 const ogImageUrl = new URL(ogImage, Astro.site);
 ---
 
