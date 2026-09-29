@@ -1,5 +1,6 @@
 ---
 import Scheda from '../layouts/Scheda.astro';
+import Figura from '../components/Figura.astro';
 ---
 
 <Scheda
@@ -18,6 +19,13 @@ import Scheda from '../layouts/Scheda.astro';
   seqNext={{ href: "quantoptica-filtri-blu.html", label: "Filtri blu" }}
 >
   <p class="bridge">Una piccola popolazione di cellule gangliari della retina, le ipRGC, contiene il fotopigmento melanopsina (OPN4). Il loro picco di sensibilità sta intorno ai 460–480 nm.</p>
+
+  <Figura
+    src="/assets/foto/cielo-raggi.jpg"
+    alt="Sole allo zenit con raggi visibili tra veli di nuvole"
+    caption="Sole e raggi. Il dischetto è un riflesso nell'obiettivo, non un secondo astro."
+  />
+
   <h2>Non è il cono «blu»</h2>
   <p>Coni e bastoncelli fanno l’immagine. Le ipRGC fanno un altro mestiere: dicono al cervello <em>che ora è</em>. Proiettano soprattutto al nucleo soprachiasmatico (SCN) dell’ipotalamo, l’orologio centrale. Da lì il segnale si dirama verso centri di veglia, temperatura e controllo delle ghiandole. <span class="livello consolidato">Evidenza consolidata</span></p>
   <h2>Dall’occhio all’epifisi</h2>

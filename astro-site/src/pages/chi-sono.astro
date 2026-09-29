@@ -1,5 +1,6 @@
 ---
 import Scheda from '../layouts/Scheda.astro';
+import Figura from '../components/Figura.astro';
 
 const footerLinks = [
   { href: 'index.html', label: 'Home' },
@@ -16,6 +17,11 @@ const footerLinks = [
   footerLinks={footerLinks}
   showLogo
 >
+  <Figura
+    src="/assets/foto/andrea-giardino.jpg"
+    alt="Andrea Mele, ritratto in luce naturale di giorno"
+    caption="Andrea Mele."
+  />
   <p class="bridge">Mi chiamo Andrea Mele. Provengo da percorsi distinti, tenuti separati per competenza e per registro.</p>
   <p>Non è un vezzo. È il modo per non mescolare mestieri che chiedono prove diverse e un linguaggio diverso. Chi arriva per l’occhio non deve ricevere una mappa. Chi arriva per la mappa non deve ricevere una prescrizione. Chi arriva per la luce rossa deve sapere che è una pratica di benessere, dichiarata come tale.</p>
 
